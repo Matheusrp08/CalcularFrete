@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SigaBem</title>
+</head>
+<body>
+
+<h1>Calcular Frete SigaBem</h1>
+
+<form th:action="@{/SigaBem}" th:object="${EnderecoOrigem}" method="post">
+
+    <input type="text" name="nomeDestinatario"     th:field="*{nomeDestinatario}"     th:placeholder="nomeDestinatario"/> <br/>
+    <input type="text" name="cepOrigem"     th:field="*{cepOrigem}"     th:placeholder="cepOrigem"/> <br/>
+    <input type="text" name="cepDestino"     th:field="*{cepDestino}"     th:placeholder="cepDestino"/> <br/>
+    <input type="text" name="peso"     th:field="*{peso}"     th:placeholder="peso"/> <br/>
+
+    <button type="submit">Calcular Frete</button>
+
+</form>
+
+</body>
+</html>
